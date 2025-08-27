@@ -20,3 +20,18 @@ print(freezset)
 print(istrue)
 print(byte_array)
 print(string)
+
+
+teams = ['Man City','Barca','PSG']
+print(teams)
+
+players = ('Ryan','Pedri','Pacho')
+print(type(players))
+
+coaches = [{'name':'Josep','age':54},{'name':'Gasperini','age':74}]
+print(coaches)
+coaches.append({'name':'Jose','age':54})
+print(coaches)
+refs = frozenset(('Ryan','Pedro','Paco'))
+print(refs)
+print(type(refs))
