@@ -35,3 +35,14 @@ b -= a
 print(f'b = {b}')
 a += a
 print(f'a = {a}')
+
+# 3
+"""
+	first create variables item,price,quantity
+	second print out using only string concatenation and type conversion
+"""
+item = 'Pens'
+price = 2.5
+quantity = 4
+
+print('You bought '+ str(quantity) + ' ' + item + ' for total of ' + str(quantity*price) + ' dollars.')
