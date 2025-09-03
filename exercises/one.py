@@ -18,3 +18,20 @@ def calculator(a:float,b:float):
 
 
 calculator(input_a,input_b)
+
+# 2
+"""
+	first create variables a=5 b=10
+	second prepare swiping methods hint use arithmetic operations
+"""
+
+a = 5
+b = 10
+
+print(f'a = {a}')
+print(f'b = {b}')
+
+b -= a
+print(f'b = {b}')
+a += a
+print(f'a = {a}')
