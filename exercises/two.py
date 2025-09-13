@@ -97,3 +97,12 @@ print(positive_multiplied_by_two)
 
 # 15
 letters = ["a", "b", "a", "c", "b", "a", "d", "b"]
+
+letter_counter = dict()
+
+for letter in letters:
+	if letter not in letter_counter:
+		letter_counter[letter] = 1
+	else:
+		letter_counter[letter] += 1
+print(letter_counter)

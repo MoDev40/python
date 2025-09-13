@@ -103,3 +103,12 @@ print(even_numbers)
 
 numbers = [ x if x >= 5 else x%2 for x in range(20)]
 print(numbers)
+
+l1 = ["apple", "banana", "cherry"]
+print(l1)
+l2 = l1
+l3 = l1.copy()
+print(l2)
+l1.append('orange')
+print(l2)
+print(l3)
