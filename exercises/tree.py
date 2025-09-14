@@ -47,3 +47,19 @@ team_1 = {'Real','Barca','Porto'}
 team_2 = {'Palmer\'s','PSG','Barca','Real'}
 team_1.intersection_update(team_2)
 print(team_1)
+
+## Practice exercise for sets
+
+# 1
+shop1 = {"alice@gmail.com", "bob@gmail.com", "claire@gmail.com"}
+shop2 = {"david@gmail.com", "bob@gmail.com", "eve@gmail.com"}
+unique_emails = shop1.union(shop2)
+print(unique_emails)
+# 2
+insta_followers = {"ali", "fatima", "sami", "john"}
+twitter_followers = {"john", "amina", "sami", "lina"}
+print(insta_followers.intersection(twitter_followers))
+# 3
+registered = {"Ayan", "Zara", "Musa", "Omar"}
+attended = {"Zara", "Musa"}
+print(registered.difference(attended))
