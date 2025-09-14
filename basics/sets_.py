@@ -59,3 +59,39 @@ set2_ = {1, 2, 3}
 
 set1.update(set2_)
 print(set1)
+
+set1 = {'apple','banana','mango'}
+set2 = {'apple','banana','orange'}
+print(set1.intersection(set2))
+set1 = {"apple", "banana", "cherry"}
+set2 = {"google", "microsoft", "apple"}
+print(set1 & set2)
+
+set1.intersection_update(set2)
+print(set1)
+
+set1 = {"apple", 1,  "banana", 0, "cherry"}
+set2 = {False, "google", 1, "apple", 2, True}
+
+set3 = set1.intersection(set2)
+
+print(set3)
+
+print(set1.difference(set2))
+print(set2-set1)
+
+set2.difference_update(set1)
+print(set2)
+set1 = {"apple", "banana", "cherry",'onion'}
+set2 = {"google", "microsoft", "apple",'onion'}
+print(set2 ^ set1)
+
+team1 = {'Paris','Barca','Real','Arsenal'}
+team2 = {'Man city','Celtic','Porto','Arsenal'}
+
+print(team1.union(team2)) # Joining
+print(team1.intersection(team2)) # Keep duplicate
+print(team1.difference(team2)) # Returns difference between while removing the elements that are in both.
+print(team2.difference(team1)) # Returns difference between
+print(team1.symmetric_difference(team2)) # appends both while removing the elements that are in both.
+print(team2.symmetric_difference(team1))
