@@ -34,3 +34,15 @@ if not size >= width:
 
 if size:
 	pass
+
+weather = 'hot'
+
+match weather:
+	case 'rainy':
+		print('rainy')
+	case 'snow':
+		print('Snowing is so cool')
+	case 'sunny' | 'cloudy':
+		print('Sunny or cloudy is so calm')
+	case _:
+		print(weather,'is not available')
