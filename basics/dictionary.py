@@ -33,3 +33,19 @@ if 'is_active' in student:
 	print('is_active key is in student')
 
 print(dict(color='Red',type='Electric',price=20,period='2m'))
+
+print(car)
+car['year'] = 2003
+print(car)
+car.update({'model':'Electric'})
+print(car)
+car['color'] = 'black'
+print(car)
+car.pop('color')
+print(car)
+del car['model']
+print(car)
+car.popitem()
+print(car)
+car.clear()
+print(car)
