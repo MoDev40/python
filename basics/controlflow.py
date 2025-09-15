@@ -16,3 +16,21 @@ else:
 is_active = True
 
 print('Active') if is_active else print('Inactive')
+
+x = 6
+y = 8
+
+if x < y and is_active:
+	print(x,'is less than',y,sep=' ')
+if x > y or is_active:
+	print('x is not greater than',x,y,'this is because of or condition',sep=' ')
+	
+
+size= 32
+width = 33
+
+if not size >= width:
+	print('size is less than width')
+
+if size:
+	pass
