@@ -49,3 +49,47 @@ car.popitem()
 print(car)
 car.clear()
 print(car)
+# Looping
+for x in student:
+	print(x) #keys
+	
+for x in student:
+	print(student[x]) # values
+
+for x in student.values():
+	print(x)
+
+for key,value in student.items():
+	print(key,value,sep=' : ')
+
+car2 = car.copy()
+student2 = dict(student)
+student['name'] = 'alia'
+print(car2)
+print(student2)
+print(student)
+
+# Nested
+users = {
+	'1':{
+		'name':'Alia',
+		'password':'12345678',
+		'email':'alia@gmail.com',
+	},
+	'2':{
+		'name':'Ahmed Ali',
+		'password':'aliahmed@12',
+		'email':'amhedali201@gmail.com',
+	}
+}
+
+print(users)
+
+print(users['1'].get('name'))
+print(users['2'].get('email'))
+print('### Inside nested dictionary loop')
+for index in users:
+	for key,value in users[index].items():
+		print(key,value,sep=' : ')
+	for user in users[index].values():
+		print(user)
