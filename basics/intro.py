@@ -20,9 +20,9 @@ helloWorld = "Hello World!"
 print(x)
 print(helloWorld)
 
-my_name = 'Mdev' # Snake Case
-MyName = 'Mdev' # Pascal Case
-myName = 'Mdev' # Camel Case
+my_name = "Mdev"  # Snake Case
+MyName = "Mdev"  # Pascal Case
+myName = "Mdev"  # Camel Case
 
 print(my_name)
 print(MyName)
@@ -30,25 +30,27 @@ print(myName)
 
 # Multi value assign
 
-size,weigth = 10,20
+size, weigth = 10, 20
 
 print(size)
 print(weigth)
 
-print(size,weigth,sep=',')
+print(size, weigth, sep=",")
 
-fruits = ['Banana','Orange']
+fruits = ["Banana", "Orange"]
 
-banana,orange = fruits
+banana, orange = fruits
 
 print(banana)
 print(orange)
 
-globalVar = 'Let it go'
+globalVar = "Let it go"
+
 
 def go():
-    globalVar = 'Go away and don\'t look back' # This becomes local
+    globalVar = "Go away and don't look back"  # This becomes local
     print(globalVar)
+
 
 print(globalVar)
 go()
@@ -57,10 +59,10 @@ print(type(banana))
 
 # Exercise
 
-danger = input('Is this zone is danger area? ')
+danger = input("Is this zone is danger area? ")
 
 print(f"Is this zone is danger area {danger}")
 
-a,b,c= 3,3,10
+a, b, c = 3, 3, 10
 
-print(a+b-c)
+print(a + b - c)

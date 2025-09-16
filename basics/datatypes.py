@@ -48,7 +48,7 @@ print(multiline)
 print(vehicle[0])
 
 for x in vehicle:
-	print(x)
+    print(x)
 
 print(len(vehicle))
 
@@ -56,7 +56,7 @@ print("T" in vehicle)
 
 print("V" not in vehicle)
 
-vehicle += ',Its time to buy'
+vehicle += ",Its time to buy"
 
 print(vehicle[2:4])
 print(vehicle[2:])
@@ -65,19 +65,19 @@ print(vehicle.isupper())
 print(vehicle.lower())
 print(vehicle.title())
 print(vehicle.strip())
-print(vehicle.split(','))
+print(vehicle.split(","))
 
 print(f"The price of this phone is around ${1500:.2f} dollars")
 print(f"My name is {vehicle.split(',')[0].title()} and I am modern vehicles")
 
-print("can i get this little \"toy\".")
+print('can i get this little "toy".')
 print("So far so good \tMove away")
 print("So much love new lines \nHi")
 print("What is mean\\")
 print("What return can do for me \rHello where the previous line.😒")
 
-define_age = "Can we just say age isn\'t number"
-print(define_age.count('we'))
+define_age = "Can we just say age isn't number"
+print(define_age.count("we"))
 print(define_age.encode())
 print(define_age.isnumeric())
 print(define_age.isalnum())

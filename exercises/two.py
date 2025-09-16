@@ -4,7 +4,7 @@ print(numbers)
 ages = [16, 11, 27, 30]
 print(ages)
 
-#2
+# 2
 my_list = ["apple", "banana", "cherry"]
 print(my_list[1])  # banana
 
@@ -24,7 +24,7 @@ print(fruits)
 """
 fruits.append("onion")
 print(fruits)
-fruits.extend(list(('rose','watermelon')))
+fruits.extend(list(("rose", "watermelon")))
 print(fruits)
 
 # 6
@@ -37,7 +37,7 @@ print(numbers)
 fruits = ["apple", "banana", "cherry", "banana"]
 del fruits[1]
 print(fruits)
-fruits.remove('apple')
+fruits.remove("apple")
 print(fruits)
 fruits.pop()
 print(fruits)
@@ -52,15 +52,15 @@ print(nums)
 # 9
 colors = ["red", "green", "blue"]
 print(colors)
-colors.insert(1,'yellow')
+colors.insert(1, "yellow")
 print(colors)
 
 # 10
 basket = ["mango", "apple", "grape"]
 
-if 'apple' in basket:
-	print('Apple is in the basket')
-	
+if "apple" in basket:
+    print("Apple is in the basket")
+
 # 11
 data = [[1, 2], [3, 4], [5, 6]]
 print(data)
@@ -74,7 +74,7 @@ so data[-1][-1] you got 6 then add we got 9 that is why.
 
 # 12
 
-even_numbers_squares = [x**2 for x in range(1,11) if x % 2 == 0]
+even_numbers_squares = [x**2 for x in range(1, 11) if x % 2 == 0]
 print(even_numbers_squares)
 
 # 13
@@ -84,15 +84,15 @@ print(items)
 
 items_without_duplicate = []
 for item in items:
-	if item not in items_without_duplicate:
-		items_without_duplicate.append(item)
+    if item not in items_without_duplicate:
+        items_without_duplicate.append(item)
 
 print(items_without_duplicate)
 
 # 14
 nums = [3, 8, -2, 5, -7, 10, 0, -1]
 print(nums)
-positive_multiplied_by_two = [ x * 2 for x in nums if x > 0 ]
+positive_multiplied_by_two = [x * 2 for x in nums if x > 0]
 print(positive_multiplied_by_two)
 
 # 15
@@ -101,8 +101,8 @@ letters = ["a", "b", "a", "c", "b", "a", "d", "b"]
 letter_counter = dict()
 
 for letter in letters:
-	if letter not in letter_counter:
-		letter_counter[letter] = 1
-	else:
-		letter_counter[letter] += 1
+    if letter not in letter_counter:
+        letter_counter[letter] = 1
+    else:
+        letter_counter[letter] += 1
 print(letter_counter)
