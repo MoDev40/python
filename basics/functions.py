@@ -93,8 +93,8 @@ positional_arg_only(3, 6)
 
 
 def keyword_arg_only(*, a, b):
-    print(a+b)
+    print(a + b)
 
 
 keyword_arg_only(a=6, b=8)
-keyword_arg_only(a=7,b=4)
+keyword_arg_only(a=7, b=4)
