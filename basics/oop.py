@@ -36,3 +36,47 @@ class Car:
 
 car = Car()
 del car
+
+
+class User:
+    def __init__(self, email, password):
+        self.email = email
+        self.password = password
+
+    def get_email(self):
+        return self.email
+
+
+class Student(User):
+    def __init__(self, first_name: str, last_name: str, email: str, password: str):
+        User.__init__(self, email=email, password=password)
+        self.first_name = first_name.title()
+        self.last_name = last_name.title()
+
+    def print_full_name(self):
+        print(self.first_name, self.last_name)
+
+
+student = Student(
+    first_name="jane", last_name="doe", email="janedoe@gmail.com", password="12345"
+)
+student.print_full_name()
+print(student.get_email())
+
+
+class Teacher(User):
+    def __init__(self, first_name: str, last_name: str, email, password, age):
+        super().__init__(email, password)
+        self.first_name = first_name.title()
+        self.last_name = last_name.title()
+        self.age = age
+
+    def print_full_name(self):
+        print(self.first_name, self.last_name)
+
+    def get_email(self):
+        print(self.email)
+
+teacher = Teacher('Hassan','Salah','salahhassan@gmail.com','1299613',33)
+teacher.print_full_name()
+teacher.get_email()
