@@ -77,6 +77,7 @@ class Teacher(User):
     def get_email(self):
         print(self.email)
 
-teacher = Teacher('Hassan','Salah','salahhassan@gmail.com','1299613',33)
+
+teacher = Teacher("Hassan", "Salah", "salahhassan@gmail.com", "1299613", 33)
 teacher.print_full_name()
 teacher.get_email()
