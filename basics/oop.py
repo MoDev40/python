@@ -30,12 +30,36 @@ print(person)
 print(person.get_name())
 
 
-class Car:
-    pass
+class Vehicle:
+    def __init__(self, name):
+        self.name = name
+
+    def move(self):
+        return "Move"
 
 
-car = Car()
-del car
+class Car(Vehicle):
+    def move(self):
+        return "Drive"
+
+
+class Boat(Vehicle):
+    def move(self):
+        return "Sail"
+
+
+class Plane(Vehicle):
+    def move(self):
+        return "Fly"
+
+
+car = Car("Toyota")
+boat = Boat("H6s12")
+plane = Plane("Air32SJ11")
+
+for x in (car, boat, plane):
+    print(x.name)
+    print(x.move())
 
 
 class User:
