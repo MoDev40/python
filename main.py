@@ -19,15 +19,19 @@ print(x)
 print(type(cars))
 print(cars)
 
+
 def myfunc():
-    x = 'Hello'
+    x = "Hello"
     print(x)
+
     def myfunc2():
         nonlocal x
-        x = 'Hi'
+        x = "Hi"
         print(x)
+
     myfunc2()
     return x
+
 
 print(myfunc())
 
@@ -40,4 +44,5 @@ print(mymodule.get_platform())
 print(dir(mymodule))
 
 from basics.mymodule import user
+
 print(user)
