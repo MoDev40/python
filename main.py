@@ -18,3 +18,26 @@ print(type(x))
 print(x)
 print(type(cars))
 print(cars)
+
+def myfunc():
+    x = 'Hello'
+    print(x)
+    def myfunc2():
+        nonlocal x
+        x = 'Hi'
+        print(x)
+    myfunc2()
+    return x
+
+print(myfunc())
+
+from basics import mymodule
+
+mymodule.say_hi()
+mymodule.say_thanks()
+print(mymodule.user)
+print(mymodule.get_platform())
+print(dir(mymodule))
+
+from basics.mymodule import user
+print(user)
