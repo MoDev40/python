@@ -105,3 +105,136 @@ class Teacher(User):
 teacher = Teacher("Hassan", "Salah", "salahhassan@gmail.com", "1299613", 33)
 teacher.print_full_name()
 teacher.get_email()
+
+
+class Product:
+    def __init__(self, name, price, quantity, is_available):
+        self._name = name
+        self._price = price
+        self._quantity = quantity
+        self.__is_available = is_available
+
+    def set_is_available(self, is_available):
+        self.__is_available = is_available
+
+    def get_is_available(self):
+        return self.__is_available
+
+
+product = Product("Apple", 2, 6, True)
+product._name = "Mango"
+print(product.get_is_available())
+product.set_is_available(False)
+print(product.get_is_available())
+print(product._name)
+
+from abc import ABC, abstractmethod
+
+
+class Order(ABC):
+    def __init__(self, order_id, price, quantity, order_date, destination, status):
+        self.order_id = order_id
+        self.price = price
+        self.quantity = quantity
+        self.order_date = order_date
+        self.destination = destination
+        self.status = status
+
+    @abstractmethod
+    def pay_order(self):
+        pass
+
+    @abstractmethod
+    def process_order(self):
+        pass
+
+    @abstractmethod
+    def cancel_order(self):
+        pass
+
+    @abstractmethod
+    def progress_order(self):
+        pass
+
+
+class PizzaOrder(Order):
+    def __init__(
+        self,
+        order_id,
+        price,
+        quantity,
+        order_date,
+        destination,
+        status,
+    ):
+        super().__init__(order_id, price, quantity, order_date, destination, status)
+
+    def pay_order(self):
+        return self.quantity * self.price
+
+    def process_order(self):
+        self.status = "Processing"
+        return self.status
+
+    def cancel_order(self):
+        self.status = "Cancelled"
+
+    def progress_order(self):
+        self.status = "Delivered"
+        return self.status
+
+
+pizza_order = PizzaOrder("10K18NJ8", 7, 3, "6-5-2025", "K4 Mogadishu", "Created")
+
+print(pizza_order.process_order())
+print(pizza_order.pay_order())
+print(pizza_order.order_id)
+print(pizza_order.progress_order())
+
+
+class ClothesOrder(Order):
+    def __init__(
+        self,
+        name,
+        order_id,
+        price,
+        quantity,
+        order_date,
+        destination,
+        status,
+    ):
+        Order.__init__(self, order_id, price, quantity, order_date, destination, status)
+        self.name = name
+
+    def pay_order(self):
+        return self.quantity * self.price
+
+    def process_order(self):
+        self.status = "Processing"
+        return self.status
+
+    def cancel_order(self):
+        self.status = "Cancelled"
+        return self.status
+
+    def progress_order(self):
+        self.status = "Delivered"
+        return self.status
+
+    def print_order_name(self):
+        print(self.name)
+
+
+clothes_order = ClothesOrder(
+    "Barca Shirt",
+    "G1985LM4R",
+    9,
+    1,
+    "17-8-2024",
+    "Waberi Mogadishu",
+    "Created",
+)
+
+clothes_order.print_order_name()
+print(clothes_order.order_date)
+print(clothes_order.cancel_order())
