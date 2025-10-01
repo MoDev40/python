@@ -46,3 +46,41 @@ print(dir(mymodule))
 from basics.mymodule import user
 
 print(user)
+
+
+try:
+    print(xz)
+except NameError as ne:
+    print(ne)
+except:
+    print("Something went wrong")
+else:
+    print("Nothing went wrong")
+finally:
+    print("Finally finished")
+
+try:
+    f = open("demo.txt", "r")
+    try:
+        f.write("Hello")
+    except:
+        print("Something went wrong when writing to the file")
+    finally:
+        f.close()
+except:
+    print("Something went wrong when opening the file")
+
+deci = "k"
+
+try:
+    if not type(deci) is int:
+        raise TypeError("Decision must be an integer")
+except Exception as e:
+    print(e)
+
+price = 59
+print(f"The price is ${price:.2f} dollars")
+
+fruit = "Apple"
+
+print(f"We love {fruit.upper()}")
