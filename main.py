@@ -84,3 +84,20 @@ print(f"The price is ${price:.2f} dollars")
 fruit = "Apple"
 
 print(f"We love {fruit.upper()}")
+
+x = None
+print(x)
+print(type(x))
+
+if x is None:
+    print("No value assigned yet")
+else:
+    print(x)
+
+
+def myfunc():
+    print("Hello")
+
+
+x = myfunc()
+print(type(x))
