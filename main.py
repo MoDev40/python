@@ -101,3 +101,7 @@ def myfunc():
 
 x = myfunc()
 print(type(x))
+
+from cowsay import cow
+
+cow('Good morning....')
