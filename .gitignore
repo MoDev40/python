@@ -4,3 +4,4 @@ Include/*
 .idea/*
 Scripts/*
 pyvenv.cfg
+basics/__pycache__/*
