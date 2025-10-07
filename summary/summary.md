@@ -69,3 +69,19 @@ The examples above are classes and objects in their simplest form, and are not r
 To understand the meaning of classes we have to understand the built-in `__init__()` method.
 All classes have a method called `__init__()`, which is always executed when the class is being initiated.
 Use the `__init__()` method to assign values to object properties, or other operations that are necessary to do when the object is being created
+
+# File handling
+## Open modes
+`r` - Read - Default value. Opens a file for reading, error if the file does not exist
+
+`a` - Append - Opens a file for appending, creates the file if it does not exist
+
+`w` - Write - Opens a file for writing, creates the file if it does not exist
+
+`x` - Create - Creates the specified file, returns an error if the file exists
+
+In addition you can specify if the file should be handled as binary or text mode
+
+`t` - Text - Default value. Text mode
+
+`b` - Binary - Binary mode (e.g. images)
