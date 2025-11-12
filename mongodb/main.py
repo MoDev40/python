@@ -51,3 +51,16 @@ def getCustomers(query:dict):
 
 for x in getCustomers({'name':{'$gt':'A'}}):
     print(x)
+
+def deleteOne(query:dict):
+    print(customer.delete_one(query))
+def deleteMany(query:dict):
+    print(customer.delete_many(query))
+def deleteAll():
+    print(customer.delete_many({}))
+
+deleteOne({'name':'Jane Doe'})
+
+user = db['user']
+user.insert_one({'name':'Ahmed'})
+user.drop()
