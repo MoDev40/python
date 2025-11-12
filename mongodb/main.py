@@ -42,3 +42,12 @@ my_customers =  [
 ]
 
 # insetMany(my_customers)
+
+data = customer.find_one()
+print(data)
+
+def getCustomers(query:dict):
+    return [x for x in customer.find(query,{'name':1}).sort('name',1)]
+
+for x in getCustomers({'name':{'$gt':'A'}}):
+    print(x)
